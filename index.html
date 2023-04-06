@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  </head>
+  <body onload="getEmployee()">
+    <div class="container">
+      <h2>Employee Information</h2>
+      <div class="emp-form">
+        <form
+          onsubmit="event.preventDefault();onFormSubmit();"
+          autocomplete="off"
+        >
+          <div>
+            <input type="hidden" name="id" id="idCtr"/>
+          </div>
+          <div>
+            <label> Name</label>
+            <input type="text" name="name" id="nameCtr" placeholder="Name" required/>
+          </div>
+          <div>
+            <label for="genderCtr" class="label-selection">Gender</label>
+            <select name="pets" id="genderCtr">
+              <option value="">Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+          <div>
+            <label>Date of Birth</label>
+            <input type="date" id="dobCtr"/>
+          </div>
+          <div>
+            <label>Email</label>
+            <input type="email" name="email" id="emailCtr" placeholder="Email"/>
+          </div>
+          <div>
+            <label for="positionCtr" class="label-selection">Position</label>
+            <select name="positionCtr" id="positionCtr">
+              <option value="">Select Position</option>
+              <option value="Frontend Developer">Frontend Developer</option>
+              <option value="Backend Developer">Backend Developer</option>
+              <option value="Mobile Developer">Mobile Developer</option>
+              <option value="HR">HR</option>
+            </select>
+          </div>
+          <div class="form-action-buttons">
+            <input type="submit" value="Save" />
+          </div>
+        </form>
+      </div>
+      <div class="emp-list">
+        <div style="width: 450px; display: flex; justify-content: center; align-items: center; gap: 1rem;">
+          <input type="text" id="searchName" placeholder="Search by name"/>
+          <button class="btn-clear" onclick="clearSearch()">Clear</button>
+          <button class="btn-search" onclick="search(searchName.value)">Search</button>
+        </div>
+        <table class="list" id="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Date of Birth</th>
+                    <th>Email</th>
+                    <th>Position</th>
+                    <th style="text-align: center;">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyCtr"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
