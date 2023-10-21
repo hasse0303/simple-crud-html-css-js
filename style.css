@@ -16,7 +16,14 @@
 
 .emp-list {
     padding: 1rem;
+    padding-top: 0.5rem;
     flex: 75;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
 }
 body > table{
     width: 80%;

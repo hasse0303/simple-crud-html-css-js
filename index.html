@@ -11,7 +11,7 @@
   <body onload="getEmployee()">
     <div class="container">
       <div class="emp-form">
-        <h2>Employee Add</h2>
+        <h2 style="padding-bottom: .5rem;">Employee Add</h2>
         <form
           onsubmit="event.preventDefault();onFormSubmit();"
           autocomplete="off"
@@ -55,11 +55,13 @@
         </form>
       </div>
       <div class="emp-list">
-        <h2>Employee List</h2>
-        <div style="width: 450px; display: flex; justify-content: center; align-items: center; gap: 1rem;">
-          <input type="text" id="searchName" placeholder="Search by name"/>
-          <button class="btn-clear" onclick="clearSearch()"><i class="fa fa-remove" aria-hidden="true"></i>Clear</button>
-          <button class="btn-search" onclick="search(searchName.value)"><i class="fa fa-search"></i>Search</button>
+        <div class="header">
+          <h2>Employee List</h2>
+          <div style="width: 450px; display: flex; justify-content: center; align-items: center; gap: 1rem;">
+            <input type="text" id="searchName" placeholder="Search by name"/>
+            <button class="btn-clear" onclick="clearSearch()"><i class="fa fa-remove" aria-hidden="true"></i>Clear</button>
+            <button class="btn-search" onclick="search(searchName.value)"><i class="fa fa-search"></i>Search</button>
+          </div>
         </div>
         <table class="list" id="table">
             <thead>
