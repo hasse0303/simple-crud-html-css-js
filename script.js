@@ -38,8 +38,9 @@ function addEmployeeToList() {
     employeeList = [];
     return;
   }
-  employeeList.forEach((employee) => {
+  employeeList.forEach((employee, index) => {
     row += `<tr>
+            <td>${index + 1}</td>
             <td>${employee.name}</td>
             <td>${employee.gender}</td>
             <td>${employee.dob}</td>

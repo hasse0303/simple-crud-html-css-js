@@ -10,8 +10,8 @@
   </head>
   <body onload="getEmployee()">
     <div class="container">
-      <h2>Employee Information</h2>
       <div class="emp-form">
+        <h2>Employee Add</h2>
         <form
           onsubmit="event.preventDefault();onFormSubmit();"
           autocomplete="off"
@@ -50,19 +50,21 @@
             </select>
           </div>
           <div class="form-action-buttons">
-            <input type="submit" value="Save" />
+            <button class="btn-save"><i class="fa fa-save"></i>Save</button>
           </div>
         </form>
       </div>
       <div class="emp-list">
+        <h2>Employee List</h2>
         <div style="width: 450px; display: flex; justify-content: center; align-items: center; gap: 1rem;">
           <input type="text" id="searchName" placeholder="Search by name"/>
-          <button class="btn-clear" onclick="clearSearch()">Clear</button>
-          <button class="btn-search" onclick="search(searchName.value)">Search</button>
+          <button class="btn-clear" onclick="clearSearch()"><i class="fa fa-remove" aria-hidden="true"></i>Clear</button>
+          <button class="btn-search" onclick="search(searchName.value)"><i class="fa fa-search"></i>Search</button>
         </div>
         <table class="list" id="table">
             <thead>
                 <tr>
+                    <th>No.</th>
                     <th>Name</th>
                     <th>Gender</th>
                     <th>Date of Birth</th>
